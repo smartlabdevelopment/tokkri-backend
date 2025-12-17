@@ -1,0 +1,39 @@
+{
+  "name": "tokkri-backend",
+  "version": "1.0.0",
+  "description": "Tokkri backend service for user registration and notifications",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smartlabdevelopment/tokkri-backend.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "mongoose",
+    "backend",
+    "api"
+  ],
+  "author": "Tokkri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smartlabdevelopment/tokkri-backend/issues"
+  },
+  "homepage": "https://github.com/smartlabdevelopment/tokkri-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.2.1",
+    "mongoose": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
