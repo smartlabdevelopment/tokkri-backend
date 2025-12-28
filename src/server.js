@@ -4,7 +4,8 @@ import cors from "cors";
 import rateLimit from "express-rate-limit";
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/user.routes.js";
-
+import notificationRoutes from './routes/notificationRoutes.js';
+import { notFound, errorHandler } from './middleware/errorHandler.js';
 dotenv.config();
 connectDB();
 
@@ -22,6 +23,16 @@ app.use(
     max: 100,
   })
 );
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Routes
+app.use('/api/notifications', notificationRoutes);
+
+// Error handling
+app.use(notFound);
+app.use(errorHandler);
 
 // Routes
 app.use("/api/users", userRoutes);
